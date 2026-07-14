@@ -5,3 +5,8 @@ description = "Trouve les duplicas d'une arborescence."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
+
+[dependency-groups]
+dev = [
+    "mypy>=2.3.0",
+]
