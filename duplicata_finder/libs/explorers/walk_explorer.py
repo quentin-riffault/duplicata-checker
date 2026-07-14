@@ -11,13 +11,13 @@ class WalkExplorer(ExplorerBase):
 
         if base_path.is_file():
             yield base_path
-            raise StopIteration
+            return
 
         if not base_path.exists():
-            raise StopIteration
+            return
 
         if not base_path.is_dir():
-            raise StopIteration
+            return
 
         for dirpath, _unused_dirnames, files in walk(base_path):
 

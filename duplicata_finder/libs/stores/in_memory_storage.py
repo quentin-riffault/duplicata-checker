@@ -24,8 +24,6 @@ class InMemoryStorage(StorageBase):
             if similarity >= threshold:
                 yield other
 
-        raise StopIteration
-
     def find_all_duplicates(
         self, feature: FeatureBase
     ) -> Generator[FeatureBase, None, None]:

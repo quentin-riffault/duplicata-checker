@@ -13,13 +13,8 @@ class DeDuplicata:
         self._to_process: list[Path] = []
 
     def discover(self, explorer_class: Type[ExplorerBase]) -> int:
-        try:
-            self._to_process = list(explorer_class.find_files(self._directory))
-            return len(self._to_process)
-        except RuntimeError as runtime_error:
-            if str(runtime_error) == "generator raised StopIteration":
-                return 0
-            raise runtime_error
+        self._to_process = list(explorer_class.find_files(self._directory))
+        return len(self._to_process)
 
     def compute_features(self, feature_class: Type[FeatureBase], storage: StorageBase):
         for file in self._to_process:
