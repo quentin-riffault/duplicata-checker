@@ -2,7 +2,7 @@ from pathlib import Path
 from typing import Generator
 from os import walk
 
-from core.libs.explorers.explorer import ExplorerBase
+from duplicata_finder.libs.explorers.explorer import ExplorerBase
 
 class WalkExplorer(ExplorerBase):
 
@@ -11,13 +11,13 @@ class WalkExplorer(ExplorerBase):
 
         if base_path.is_file():
             yield base_path
-            raise StopIteration()
+            raise StopIteration
 
         if not base_path.exists():
-            raise StopIteration()
+            raise StopIteration
 
         if not base_path.is_dir():
-            raise StopIteration()
+            raise StopIteration
 
         for dirpath, _unused_dirnames, files in walk(base_path):
 

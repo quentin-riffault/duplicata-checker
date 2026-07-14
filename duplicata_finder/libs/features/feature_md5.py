@@ -1,7 +1,7 @@
 from pathlib import Path
 from hashlib import md5
 
-from core.libs.features.feature_base import FeatureBase
+from duplicata_finder.libs.features.feature_base import FeatureBase
 
 _NO_HASH = ""
 _CHUNK_SIZE = 512

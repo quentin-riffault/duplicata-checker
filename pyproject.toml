@@ -1,10 +1,17 @@
 [project]
-name = "detecto-duplicata"
+name = "duplicata_finder"
 version = "0.1.0"
 description = "Trouve les duplicas d'une arborescence."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
+classifiers = ["Private :: Do Not Upload"]
+
+[project.scripts]
+duplicata_finder = "duplicata_finder:main"
+
+[tool.setuptools]
+packages = ["duplicata_finder"]
 
 [dependency-groups]
 dev = [
