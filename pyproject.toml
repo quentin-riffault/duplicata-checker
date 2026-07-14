@@ -1,0 +1,7 @@
+[project]
+name = "detecto-duplicata"
+version = "0.1.0"
+description = "Trouve les duplicas d'une arborescence."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
