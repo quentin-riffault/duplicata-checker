@@ -17,4 +17,6 @@ packages = ["duplicata_finder"]
 dev = [
     "mypy>=2.3.0",
     "pyinstaller>=6.21.0",
+    "pylint>=4.0.6",
+    "ruff>=0.15.22",
 ]
